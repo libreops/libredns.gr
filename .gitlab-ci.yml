@@ -1,0 +1,23 @@
+image: ubuntu:18.04
+
+before_script:
+  - mkdir -pv /root/gopath
+  - export GOPATH=/root/gopath
+
+run-build:
+  stage: build
+  artifacts:
+    paths:
+    - "*.deb"
+    expire_in: 1 week
+  script:
+    - apt update && apt -y upgrade
+    - apt -y install git golang ruby-dev build-essential jq wget
+    - wget https://api.github.com/repos/m13253/dns-over-https/tags -O tags.json
+    - tar=`jq -r '.[0] | .tarball_url' tags.json`
+    - version=`jq -r '.[0] | .name' tags.json`
+    - wget $tar -O latest.tar.gz
+    - tar xvf latest.tar.gz -C . --strip-components=1
+    - gem install fpm
+    - make
+    - fpm -deb-no-default-config-files -s dir -t deb -n doh-server --config-files /etc/dns-over-https/doh-server.conf -v $version --deb-systemd systemd/doh-server.service doh-server/doh-server=/usr/local/bin/ doh-server/doh-server.conf=/etc/dns-over-https/

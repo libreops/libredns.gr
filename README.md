@@ -4,7 +4,7 @@ DNS - over TLS/HTTPS
 
 ## Support
 
-![Liberapay receiving](https://img.shields.io/liberapay/receives/libreops.svg)
+![Liberapay](https://libreops.cc/static/img/liberapay.svg)
 
 ## Join
 

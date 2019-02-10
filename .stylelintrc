@@ -37,14 +37,13 @@
 
     "declaration-colon-space-after": "always",
     "declaration-colon-space-before": "never",
-    "declaration-no-important": true,
 
     "declaration-block-trailing-semicolon": "always",
     "declaration-block-single-line-max-declarations": 1,
     "declaration-block-semicolon-space-before": "never",
     "declaration-block-semicolon-newline-after": "always-multi-line",
     "declaration-block-no-shorthand-property-overrides": true,
-    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-duplicate-properties": [true, {"ignore": ["consecutive-duplicates-with-different-values"]}],
 
     "block-no-empty": true,
     "block-closing-brace-empty-line-before": "never",
@@ -68,7 +67,7 @@
     "selector-type-no-unknown": true,
     "selector-max-empty-lines": 0,
 
-    "rule-empty-line-before": "always-multi-line",
+    "rule-empty-line-before": ["always", {"except": ["first-nested", "after-single-line-comment"]}],
 
     "media-feature-name-case": "lower",
     "media-feature-name-no-unknown": true,

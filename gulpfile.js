@@ -34,5 +34,6 @@ function assets() {
         .pipe(gulp.dest('static/lib'));
 }
 
+exports.assets = assets;
 exports.test = gulp.parallel(lint_css, lint_js);
 exports.default = gulp.series(lint_css, lint_js, assets);

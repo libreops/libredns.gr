@@ -4,9 +4,9 @@
     <title>LibreDNS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="/static/lib/fork-awesome/css/fork-awesome.min.css">
     <link rel="stylesheet" href="/static/lib/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/app.css">
+    <link rel="stylesheet" href="/static/lib/fork-awesome/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="https://libreops.cc/static/css/app.css">
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
 
@@ -15,66 +15,123 @@
     <div class="page">
 
       <div class="container">
-        <div class="page-header text-center pt-4 pb-3">
-          <a href="/">
-            <img alt="LibreDNS" class="logo" src="/static/img/libredns.svg">
-          </a>
-        </div>
+        <header class="py-3 text-center">
+          <a href="/"><img src="/static/img/libredns.svg" alt="LibreDNS" class="avatar"></a>
+        </header>
       </div>
 
       <div class="container">
 
-        <div class="card">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+
+        <div class="card my-4 mx-auto">
           <div class="card-header">
-              <a name="about">.about</a>
-          </div>
-          <div class="card-body">
-
-          </div>
-        </div>
-
-        <div class="card mt-4">
-            <div class="card-header">
-              <a name="contact">.contact</a>
-            </div>
-            <div class="card-body">
-              <p>
-                Most of us are always online at our Matrix channel:
-                <a href="https://riot.im/app/#/room/#libreops:matrix.org" target="_blank">#libreops:matrix.org</a>.
-              </p>
-              <p>
-                If you want to open a support ticket send an email to this address:<br>
-                <span class="mt-1 d-inline-block"><img src="/static/img/email.svg"></span>
-              </p>
-            </div>
-          </div>
-
-        <div class="card mt-4">
-          <div class="card-header">
-            <a name="support">.support</a>
+            .about
           </div>
           <div class="card-body">
             <p>
-              You can support us on <a href="https://liberapay.com/libreops/" target="_blank">Liberapay</a>.
+              This is a DNS service run by <a href="" target="_blank">LibreOps</a>.
             </p>
             <p>
-              Our current expenses:<br>
-              <ul>
-                <li>Domains: 70€/year</li>
-                <li>Infrastructure: 100€/year</li>
-              </ul>
+              The goal is to offer a public encrypted DNS service, that people can use,
+              to maintain secrecy of their dns traffic, but also circumvent censorship.
+            </p>
+            <p>
+              DNS over HTTPS<br><code>https://doh.libredns.gr/dns-query</code>
+            </p>
+            <p>
+              DNS over TLS<br><code>https://dot.libredns.gr</code>
             </p>
           </div>
         </div>
+
+        <div class="card my-4 mx-auto">
+          <div class="card-header">
+            .documentation
+          </div>
+          <div class="card-body">
+            <p>
+              The service offers two types of connection, both offering encryption.
+            </p>
+            <p>
+              <u>DNS over HTTPS</u>
+            </p>
+            <p>
+              DNS over HTTPS (<a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS" target="_blank">DoH</a>)
+              is best to be configured and used on applications, namely browsers.
+            </p>
+            <p>
+              At the moment the only browser that has sufficient support is Firefox.
+              To configure Firefox do the following steps:
+            </p>
+            <p>
+              <ol>
+                <li>
+                  Open Firefox settings and navigate to:<br>
+                  <code>General > Network Settings > Settings</code>
+                </li>
+                <li>
+                  At the bottom of this dialog:<br>
+                  <code>Enable DNS over HTTPS</code>.
+                </li>
+                <li>
+                  Change from the default setting to Custom and fill in:<br>
+                  <code>https://doh.libredns.gr/dns-query</code>
+                </li>
+              </ol>
+            </p>
+            <p>
+              <img src="/static/img/firefox-doh.png" alt="firefox doh" class="img-fluid">
+            </p>
+            <p>
+              <u>DNS over TLS</u>
+            </p>
+            <p>
+              DNS over TLS (<a href="https://en.wikipedia.org/wiki/DNS_over_TLS" target="_blank">DoH</a>)
+              is best to be configured globally for the entire operating system.
+            </p>
+            <p>
+
+            </p>
+          </div>
+        </div>
+
+        </div>
+        </div>
+
       </div>
 
     </div>
 
     <div class="container">
-      <footer>
-        <i class="fa fa-power-off" aria-hidden="true"></i> powered by <a href="https://libreops.cc/" target="_blank">LibreOps</a> &bull;
-        <i class="fa fa-slack" aria-hidden="true"></i> talk to us at <a href="https://riot.im/app/#/room/#libreops:matrix.org" target="_blank">matrix</a> &bull;
-        <i class="fa fa-life-ring" aria-hidden="true"></i> support us at <a href="https://liberapay.com/libreops/" target="_blank">liberapay</a>
+      <footer class="p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <a href="https://riot.im/app/#/room/#libreops:matrix.org" class="mx-1" target="_blank" data-toggle="tooltip" title="Chat">
+          <i class="fa fa-comments" aria-hidden="true"></i>
+        </a>
+        <a href="https://liberapay.com/libreops/" class="mx-1" target="_blank" data-toggle="tooltip" title="Donate">
+          <i class="fa fa-liberapay" aria-hidden="true"></i>
+        </a>
+        <a href="https://status.libreops.cc/" class="mx-1" target="_blank" data-toggle="tooltip" title="Services Status">
+          <i class="fa fa-area-chart" aria-hidden="true"></i>
+        </a>
+        &bull;
+        <a href="https://gitlab.com/libreops/" class="mx-1" target="_blank" data-toggle="tooltip" title="Gitlab">
+          <i class="fa fa-gitlab" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/libreops/" class="mx-1" target="_blank" data-toggle="tooltip" title="Github">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        &bull;
+        <a href="/feed.xml" class="mx-1" data-toggle="tooltip" title="Feed">
+          <i class="fa fa-rss" aria-hidden="true"></i>
+        </a>
+        <a href="https://libretooth.gr/@libreops" class="mx-1" data-toggle="tooltip" title="Mastodon">
+          <i class="fa fa-mastodon" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/libreops" class="mx-1" data-toggle="tooltip" title="Twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
       </footer>
     </div>
 

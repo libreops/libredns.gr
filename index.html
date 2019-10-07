@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://libreops.cc/static/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://libreops.cc/static/lib/fork-awesome/css/fork-awesome.min.css">
     <link rel="stylesheet" href="https://libreops.cc/static/css/app.css">
+    <link rel="stylesheet" href="/static/css/app.css">
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
 
@@ -32,10 +33,7 @@
               to maintain secrecy of their dns traffic, but also circumvent censorship.
             </p>
             <p>
-              DNS over HTTPS<br><code>https://doh.libredns.gr/dns-query</code>
-            </p>
-            <p>
-              DNS over TLS<br><code>https://dot.libredns.gr:853</code>
+              We already support <strong>DNS over HTTPS</strong> and <strong>DNS over TLS</strong>.
             </p>
           </div>
         </div>
@@ -48,8 +46,8 @@
             <p>
               The service offers two types of connection, both offering encryption.
             </p>
-            <p>
-              <u>DNS over HTTPS</u>
+            <p class="docs-section">
+              DNS over HTTPS
             </p>
             <p>
               DNS over HTTPS (<a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS" target="_blank">DoH</a>)
@@ -78,15 +76,34 @@
             <p>
               <img src="/static/img/firefox-doh.png" alt="firefox doh" class="img-fluid">
             </p>
-            <p>
-              <u>DNS over TLS</u>
+            <p class="docs-section">
+              DNS over TLS
             </p>
             <p>
-              DNS over TLS (<a href="https://en.wikipedia.org/wiki/DNS_over_TLS" target="_blank">DoH</a>)
+              DNS over TLS (<a href="https://en.wikipedia.org/wiki/DNS_over_TLS" target="_blank">DoT</a>)
               is best to be configured globally for the entire operating system.
             </p>
             <p>
-
+              A few client already support the protocol. The easiest way is to configure systemd to use it.
+            </p>
+            <p>
+              <ol>
+                <li>
+                  Open systemd relevant configuration file, with you favorite editor and sudo rights:
+                  <code>/etc/systemd/resolved.conf</code>
+                </li>
+                <li>
+                  And make sure you have these options:<br>
+                  <code>
+                    [Resolve]<br>
+                    DNS=116.203.115.192<br>
+                    FallbackDNS=127.0.0.1 ::1<br>
+                    DNSOverTLS=yes<br>
+                  </code>
+                  <br>
+                  If you are on systemd &lt; 243 then use `opportunistic`, instead of `yes`.
+                </li>
+              </ol>
             </p>
           </div>
         </div>

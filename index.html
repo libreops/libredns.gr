@@ -125,6 +125,32 @@
           </div>
         </div>
 
+        <div class="card w-75 mx-auto mt-4">
+          <div class="card-header">
+            .privacy
+          </div>
+          <div class="card-body">
+            <p>
+              One of the motives for creating this service was to build a DNS server that will keep a minimum
+              amount of (meta)data and only the bare minimum that is required for its core functionality,
+              in respect to users privacy.
+            </p>
+            <p>In detail:</p>
+            <ul>
+              <li>
+                We keep no logs. Logs are
+                <a href="https://gitlab.com/libreops/libredns/libredns-cfg/blob/master/roles/dns-over-https/templates/doh-server.conf.j2#L49-50" target="_blank">disabled</a>
+                for our DNS daemon.
+              </li>
+              <li>
+                We use a local resolver for the DNS requests.
+                We use <a href="https://www.opennic.org/" target="_blank">OpenNIC</a> as our Tier 1.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
       </div>
 
     </div>

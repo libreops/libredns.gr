@@ -64,17 +64,17 @@
             </p>
             <p>
               At the moment the only browser that has sufficient support is Firefox.
-              To configure Firefox do the following steps:
+              To configure Firefox:
             </p>
             <p>
               <ol>
                 <li>
-                  Open Firefox settings and navigate to:<br>
+                  Open Firefox settings and <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox" target="_blank">navigate to</a>:<br>
                   <code>General > Network Settings > Settings</code>
                 </li>
                 <li>
                   At the bottom of this dialog:<br>
-                  <code>Enable DNS over HTTPS</code>.
+                  <code>Enable DNS over HTTPS</code>
                 </li>
                 <li>
                   Change from the default setting to Custom and fill in:<br>
@@ -101,16 +101,15 @@
               is best to be configured globally for the entire operating system.
             </p>
             <p>
-              A few client already support the protocol. The easiest way is to configure systemd to use it.
+              A few clients already support the protocol, and the easiest way is to configure systemd to use it:
             </p>
             <p>
               <ol>
                 <li>
-                  Open systemd relevant configuration file, with you favorite editor and sudo rights:
-                  <code>/etc/systemd/resolved.conf</code>
+                  Open <code>/etc/systemd/resolved.conf</code> with you favorite editor and sudo rights.
                 </li>
                 <li>
-                  And make sure you have these options:<br>
+                  Make sure you have the following options:<br>
                   <code>
                     [Resolve]<br>
                     DNS=116.203.115.192<br>
@@ -118,7 +117,7 @@
                     DNSOverTLS=yes<br>
                   </code>
                   <br>
-                  If you are on systemd &lt; 243 then use `opportunistic`, instead of `yes`.
+                  If you are on systemd &lt; 243, then use <code>opportunistic</code>, instead of <code>yes</code>.
                 </li>
               </ol>
             </p>

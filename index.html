@@ -35,8 +35,8 @@
               This is a DNS service run by <a href="https://libreops.cc" target="_blank">LibreOps</a>.
             </p>
             <p>
-              The goal is to offer a public encrypted DNS service, that people can use,
-              to maintain secrecy of their dns traffic, but also circumvent censorship.
+              The goal is to offer a public encrypted DNS service that people can use
+              to maintain the secrecy of their DNS traffic, but also circumvent censorship.
             </p>
             <p>
               We already support <strong>DNS over HTTPS</strong> and <strong>DNS over TLS</strong>.
@@ -63,7 +63,7 @@
             <p>
               <ol>
                 <li>
-                  Open Firefox settings and <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox" target="_blank">navigate to</a>:<br>
+                  Open Firefox preferences and <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox" target="_blank">navigate to</a>:<br>
                   <code>General > Network Settings > Settings</code>
                 </li>
                 <li>
@@ -74,10 +74,11 @@
                   Change from the default setting to Custom and fill in:<br>
                   <code>https://doh.libredns.gr/dns-query</code>
                 </li>
+                </br>
+                <p>
+                  <img src="/static/img/firefox-doh.png" alt="firefox doh" class="img-fluid">
+                </p>
               </ol>
-            </p>
-            <p>
-              <img src="/static/img/firefox-doh.png" alt="firefox doh" class="img-fluid">
             </p>
 
             <hr>
@@ -127,7 +128,7 @@
                     DNSOverTLS=yes<br>
                   </code>
                   <br>
-                  If you are on systemd &lt; 243, then use <code>opportunistic</code>, instead of <code>yes</code>.
+                  If you are on systemd &lt; 243, then use <code>opportunistic</code> instead of <code>yes</code>.
                 </li>
               </ol>
             </p>
@@ -148,7 +149,7 @@
             <ul>
               <li>
                 We keep no logs. Logs are
-                <a href="https://gitlab.com/libreops/libredns/libredns-cfg/blob/master/roles/dns-over-https/templates/doh-server.conf.j2#L49-50" target="_blank">disabled</a>
+                <a href="https://gitlab.com/libreops/libredns/libredns-cfg/blob/8ca7e35fa89db25f5d393c4e5a3f087b68639b9f/roles/dns-over-https/templates/doh-server.conf.j2#L49-50" target="_blank">disabled</a>
                 for our DNS daemon.
               </li>
               <li>

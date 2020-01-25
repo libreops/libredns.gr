@@ -2,3 +2,10 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+blockquote {
+  color: #7f8fa4;
+  padding: 8px 24px;
+  margin: 16px 0;
+  border-left: 3px solid #eaeaea;
+}

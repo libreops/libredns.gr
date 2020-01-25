@@ -4,12 +4,12 @@ DNS - over TLS/HTTPS
 
 ## Support
 
-[![Liberapay](https://libreops.cc/static/img/liberapay.svg)](https://liberapay.com/libreops/donate)
+[![OpenCollective](https://img.shields.io/opencollective/all/libreops?color=%23800&label=opencollective&style=flat-square)](https://opencollective.com/libreops/)
 
 ## Join
 
-[![irc](https://img.shields.io/badge/Matrix-%23libreops:matrix.org-blue.svg)](https://riot.im/app/#/room/#libreops:matrix.org)
+[![irc](https://img.shields.io/badge/Matrix-%23libreops:matrix.org-blue.svg?style=flat-square)](https://riot.im/app/#/room/#libreops:matrix.org)
 
 ## License
 
-[![license](https://img.shields.io/badge/license-AGPL%203.0-6672D8.svg)](LICENSE)
+[![license](https://img.shields.io/badge/license-AGPL%203.0-6672D8.svg?style=flat-square)](LICENSE)

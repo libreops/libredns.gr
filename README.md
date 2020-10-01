@@ -2,11 +2,11 @@
 
 DNS - over TLS/HTTPS
 
-## Support
+## Support Us
 
 [![OpenCollective](https://img.shields.io/opencollective/all/libreops?color=%23800&label=opencollective&style=flat-square)](https://opencollective.com/libreops/)
 
-## Join
+## Join Us
 
 [![irc](https://img.shields.io/badge/Matrix-%23libreops:matrix.org-blue.svg?style=flat-square)](https://riot.im/app/#/room/#libreops:matrix.org)
 

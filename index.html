@@ -135,7 +135,7 @@
                   Make sure you have the following options:<br>
                   <code>
                     [Resolve]<br>
-                    DNS=116.202.176.26<br>
+                    DNS=116.202.176.26#dot.libredns.gr<br>
                     FallbackDNS=127.0.0.1 ::1<br>
                     DNSOverTLS=yes<br>
                   </code>
@@ -161,6 +161,15 @@
               <span class="badge badge-dark">IP</span> <code>116.202.176.26</code><br>
               <span class="badge badge-dark">Port</span> <code>854</code><br>
               <span class="badge badge-dark">Domain</span> <code>dot.libredns.gr</code><br>
+            </p>
+            <p>
+              In case you want to update your systemd-resolv configuration file:<br>
+              <code>
+                [Resolve]<br>
+                DNS=116.202.176.26:854#dot.libredns.gr<br>
+                FallbackDNS=127.0.0.1 ::1<br>
+                DNSOverTLS=yes<br>
+              </code>
             </p>
           </div>
         </div>

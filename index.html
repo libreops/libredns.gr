@@ -68,30 +68,110 @@
               DNS over HTTPS (<a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS" target="_blank">DoH</a>)
               is best to be configured and used on applications, namely browsers.
             </p>
-            <p>
-              At the moment the only browser that has sufficient support is Firefox.
-              To configure Firefox:
-            </p>
-            <p>
+            <p>To configure your browser:</p>
+            <ul>
+             <li>
+              <strong>Firefox</strong>
               <ol>
-                <li>
-                  Open Firefox preferences and <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox" target="_blank">navigate to</a>:<br>
-                  <code>General > Network Settings > Settings</code>
-                </li>
-                <li>
-                  At the bottom of this dialog:<br>
-                  <code>Enable DNS over HTTPS</code>
-                </li>
-                <li>
-                  Change from the default setting to Custom and fill in:<br>
-                  <code>https://doh.libredns.gr/dns-query</code>
-                </li>
-                </br>
-                <p>
-                  <img src="/static/img/firefox-doh.png" alt="firefox doh" class="img-fluid">
-                </p>
-              </ol>
-            </p>
+              <li>
+              Open Firefox preferences and
+              <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox"
+               target="_blank">navigate to</a>:<br />
+             <code>General > Network Settings > Settings</code>
+             </li>
+             <li>
+              At the bottom of this dialog:<br />
+              <code>Enable DNS over HTTPS</code>
+             </li>
+             <li>
+        Change from the default setting to Custom and fill in:<br />
+        <code>https://doh.libredns.gr/dns-query</code>
+      </li>
+      <br />
+      <img
+        src="/static/img/firefox-doh.png"
+        alt="firefox doh"
+        class="img-fluid"
+      />
+      <br />
+      <br />
+    </ol>
+  </li>
+  <li>
+    <strong>Chrome</strong> or <strong>Chromium</strong>
+    <ol>
+      <li>Click on the three-dot menu in your browser window.</li>
+      <li>Select <code>Settings</code>.</li>
+      <li>Scroll down to <code>Privacy and security > Security</code>.</li>
+      <li>Scroll down and enable the <code>Use secure DNS</code> switch.</li>
+      <li>
+        Select <code>Custom</code> and fill in
+        <code>https://doh.libredns.gr/dns-query</code>
+      </li>
+    </ol>
+  </li>
+  <br />
+
+  <li>
+    <strong>Microsoft Edge</strong>
+    <ol>
+      <li>Go to <code>edge://settings/privacy</code>.</li>
+      <li>Scroll down to the <code>Security</code> section.</li>
+      <li>Make sure the <code>Use secure DNS</code> option is enabled.</li>
+      <li>
+        Select Custom and fill in <code>https://doh.libredns.gr/dns-query</code>
+      </li>
+    </ol>
+  </li>
+  <br />
+
+  <li>
+    <strong>Brave</strong>
+    <ol>
+      <li>Click the menu button in your browser window.</li>
+      <li>Navigate to <code>Settings</code>.</li>
+      <li>
+        On the left side of the menu, scroll down and click
+        <code>Settings</code>.
+      </li>
+      <li>Navigate to <code>Privacy and security > Security</code>.</li>
+      <li>Enable <code>Use secure DNS</code>.</li>
+      <li>
+        Click With Custom and fill in
+        <code>https://doh.libredns.gr/dns-query</code>
+      </li>
+    </ol>
+  </li>
+  <br />
+
+  <li>
+    <strong>Vivaldi</strong>
+    <ol>
+      <li>
+        Open the Vivaldi browser and go to the following URL:
+        <code>vivaldi://settings/security</code>
+      </li>
+      <li>Toggle the <code>Use secure DNS</code> switch</li>
+      <li>Click <code>With > Custom</code></li>
+      <li>Fill in <code>https://doh.libredns.gr/dns-query</code></li>
+    </ol>
+  </li>
+  <br />
+
+  <li><strong>Opera</strong></li>
+  <ol>
+    <li>Navigate to <code>Opera Menu > Settings > Advanced > Browser</code></li>
+    <li>Scroll down to the <code>System group of preferences</code></li>
+    <li>
+      Toggle the
+      <code>Use DNS-over-HTTPS instead of the system's DNS settings</code>
+    </li>
+    <li>
+      Set custom provider to <code>https://doh.libredns.gr/dns-query</code>
+    </li>
+  </ol>
+</ul>
+ </br>
 
             <hr>
 

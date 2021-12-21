@@ -68,30 +68,46 @@
               DNS over HTTPS (<a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS" target="_blank">DoH</a>)
               is best to be configured and used on applications, namely browsers.
             </p>
-            <p>
-              At the moment the only browser that has sufficient support is Firefox.
-              To configure Firefox:
-            </p>
-            <p>
-              <ol>
-                <li>
-                  Open Firefox preferences and <a href="https://support.mozilla.org/en-US/kb/connection-settings-firefox" target="_blank">navigate to</a>:<br>
-                  <code>General > Network Settings > Settings</code>
-                </li>
-                <li>
-                  At the bottom of this dialog:<br>
-                  <code>Enable DNS over HTTPS</code>
-                </li>
-                <li>
-                  Change from the default setting to Custom and fill in:<br>
-                  <code>https://doh.libredns.gr/dns-query</code>
-                </li>
-                </br>
-                <p>
-                  <img src="/static/img/firefox-doh.png" alt="firefox doh" class="img-fluid">
-                </p>
-              </ol>
-            </p>
+
+            <p>To configure your browser:</p>
+
+            <ul>
+
+              <li class="mb-3"><strong>Firefox</strong>
+                <ol>
+                  <li>Click on the three-dash menu in your browser window.</li>
+                  <li>Select <code>Settings</code>.</li>
+                  <li>Navigate to <code>General > Network Settings > Settings</code></li>
+                  <li>At the bottom of this dialog: <code>Enable DNS over HTTPS</code></li>
+                  <li>Change from the default setting to Custom and fill in: <code>https://doh.libredns.gr/dns-query</code></li>
+                </ol>
+              </li>
+
+              <li class="mb-3"><strong>Chrome</strong> or <strong>Chromium</strong>
+                <ol>
+                  <li>Click on the three-dot menu in your browser window.</li>
+                  <li>Select <code>Settings</code>.</li>
+                  <li>Scroll down to <code>Privacy and security > Security</code>.</li>
+                  <li>Scroll down and enable the <code>Use secure DNS</code> switch.</li>
+                  <li>Select <code>Custom</code> and fill in <code>https://doh.libredns.gr/dns-query</code></li>
+                </ol>
+              </li>
+
+              <li class="mb-3"><strong>Edge</strong>
+                <ol>
+                  <li>Go to <code>edge://settings/privacy</code>.</li>
+                  <li>Scroll down to the <code>Security</code> section.</li>
+                  <li>Make sure the <code>Use secure DNS</code> option is enabled.</li>
+                  <li>Select Custom and fill in <code>https://doh.libredns.gr/dns-query</code></li>
+                </ol>
+              </li>
+
+            </ul>
+
+            <blockquote>
+              For more browser configuration guidelines check
+              <a href="https://gitlab.com/libreops/libredns/libredns.gr/-/wikis/home" target="_new">our wiki</a>.
+            </blockquote>
 
             <hr>
 

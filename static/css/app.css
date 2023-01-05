@@ -1,6 +1,8 @@
 .docs-section {
   font-weight: bold;
   text-decoration: underline;
+  padding-top: 30px;
+  border-top: 1px solid lightgray;
 }
 
 blockquote {
@@ -8,4 +10,81 @@ blockquote {
   padding: 8px 24px;
   margin: 16px 0;
   border-left: 3px solid #eaeaea;
+}
+
+/* Tabs */
+.tab-section > input,
+.tab-section section > div {
+  display: none;
+}
+
+#doh-tab1:checked ~ section .doh-tab1,
+#doh-tab2:checked ~ section .doh-tab2,
+#doh-tab3:checked ~ section .doh-tab3,
+#dot-tab1:checked ~ section .dot-tab1,
+#dot-tab2:checked ~ section .dot-tab2,
+#dot-tab3:checked ~ section .dot-tab3 {
+  display: block;
+}
+
+.tab-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section div ul {
+  list-style: disc !important;
+  padding-left: inherit !important;
+}
+
+.tab-section ul li label {
+  float: left;
+  padding: 15px 25px;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  background: #eeeeee;
+  color: #444;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.tab-section section {
+  clear: both;
+}
+
+.tab-section section div {
+  padding: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  line-height: 1.5em;
+  letter-spacing: 0.3px;
+  color: #444;
+}
+
+#doh-tab1:checked ~ nav .doh-tab1 label,
+#doh-tab2:checked ~ nav .doh-tab2 label,
+#doh-tab3:checked ~ nav .doh-tab3 label,
+#dot-tab1:checked ~ nav .dot-tab1 label,
+#dot-tab2:checked ~ nav .dot-tab2 label,
+#dot-tab3:checked ~ nav .dot-tab3 label {
+  background: white;
+  color: #111;
+  position: relative;
+}
+
+#doh-tab1:checked ~ nav .doh-tab1 label:after,
+#doh-tab2:checked ~ nav .doh-tab2 label:after,
+#doh-tab3:checked ~ nav .doh-tab3 label:after,
+#dot-tab1:checked ~ nav .dot-tab1 label:after,
+#dot-tab2:checked ~ nav .dot-tab2 label:after,
+#dot-tab3:checked ~ nav .dot-tab3 label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
 }

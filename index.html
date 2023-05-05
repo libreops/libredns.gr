@@ -26,15 +26,15 @@
           <a href="/"><img src="/static/img/libredns.svg" alt="LibreDNS" class="avatar"></a>
         </header>
 
-        <div class="d-none alert alert-success w-75 mx-auto mt-3 mb-4" role="alert" id="test-success">
+        <div class="d-none alert alert-success mx-auto mt-3 mb-4" role="alert" id="test-success">
           <i class="fa fa-check-circle" aria-hidden="true"></i> You are using LibreDNS. Your DNS requests are encrypted!
         </div>
 
-        <div class="d-none alert alert-danger w-75 mx-auto mt-3 mb-4" role="alert" id="test-danger">
+        <div class="d-none alert alert-danger mx-auto mt-3 mb-4" role="alert" id="test-danger">
           <i class="fa fa-times-circle" aria-hidden="true"></i> You are not using LibreDNS :(
         </div>
 
-        <div class="card w-75 mx-auto">
+        <div class="card mx-auto">
           <div class="card-header">
             about
           </div>
@@ -52,7 +52,7 @@
           </div>
         </div>
 
-        <div class="card w-75 mx-auto mt-4">
+        <div class="card mx-auto mt-4">
           <div class="card-header">
             DNS over HTTPS
           </div>
@@ -60,52 +60,89 @@
             <p>
               <span class="badge badge-dark">Endpoint</span> <code>https://doh.libredns.gr/dns-query</code>
             </p>
+
+            <p class="docs-section">
+              Blocking Ads and Trackers
+            </p>
+
+            <p>
+              We also offer an endpoint that blocks a
+              <a href="https://github.com/StevenBlack/hosts" target="_blank">crowdsourced list</a>
+              of known advertisement and tracking domains.
+            </p>
+            <p>
+              <span class="badge badge-dark">Endpoint</span> <code>https://doh.libredns.gr/noads</code>
+            </p>
+
+            <p class="docs-section">
+              Documentation
+            </p>
+
             <p>
               DNS over HTTPS (<a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS" target="_blank">DoH</a>)
               is best to be configured and used on applications, namely browsers.
             </p>
 
-            <p>To configure your browser:</p>
+            <div class="tab-section">
+              <input checked="checked" id="doh-tab1" type="radio" name="doh-tab">
+              <input id="doh-tab2" type="radio" name="doh-tab">
+              <input id="doh-tab3" type="radio" name="doh-tab">
+              <nav>
+                <ul>
+                  <li class="doh-tab1">
+                    <label for="doh-tab1">Firefox</label>
+                  </li>
+                  <li class="doh-tab2">
+                    <label for="doh-tab2">Chrome / Chromium</label>
+                  </li>
+                  <li class="doh-tab3">
+                    <label for="doh-tab3">Edge</label>
+                  </li>
+                </ul>
+              </nav>
+              <section>
+                <div class="doh-tab1">
+                  <ol>
+                    <li>Click on the three-dash menu in your browser window.</li>
+                    <li>Select <code>Settings</code>.</li>
+                    <li>Navigate to <code>General > Network Settings > Settings</code></li>
+                    <li>At the bottom of this dialog: <code>Enable DNS over HTTPS</code></li>
+                    <li>Change from the default setting to Custom and fill in: <code>https://doh.libredns.gr/dns-query</code></li>
+                  </ol>
+                </div>
+                <div class="doh-tab2">
+                  <ol>
+                    <li>Click on the three-dot menu in your browser window.</li>
+                    <li>Select <code>Settings</code>.</li>
+                    <li>Scroll down to <code>Privacy and security > Security</code>.</li>
+                    <li>Scroll down and enable the <code>Use secure DNS</code> switch.</li>
+                    <li>Select <code>Custom</code> and fill in <code>https://doh.libredns.gr/dns-query</code></li>
+                  </ol>
+                </div>
+                <div class="doh-tab3">
+                  <ol>
+                    <li>Go to <code>edge://settings/privacy</code>.</li>
+                    <li>Scroll down to the <code>Security</code> section.</li>
+                    <li>Make sure the <code>Use secure DNS</code> option is enabled.</li>
+                    <li>Select Custom and fill in <code>https://doh.libredns.gr/dns-query</code></li>
+                  </ol>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
 
-            <ul>
-
-              <li class="mb-3"><strong>Firefox</strong>
-                <ol>
-                  <li>Click on the three-dash menu in your browser window.</li>
-                  <li>Select <code>Settings</code>.</li>
-                  <li>Navigate to <code>General > Network Settings > Settings</code></li>
-                  <li>At the bottom of this dialog: <code>Enable DNS over HTTPS</code></li>
-                  <li>Change from the default setting to Custom and fill in: <code>https://doh.libredns.gr/dns-query</code></li>
-                </ol>
-              </li>
-
-              <li class="mb-3"><strong>Chrome</strong> or <strong>Chromium</strong>
-                <ol>
-                  <li>Click on the three-dot menu in your browser window.</li>
-                  <li>Select <code>Settings</code>.</li>
-                  <li>Scroll down to <code>Privacy and security > Security</code>.</li>
-                  <li>Scroll down and enable the <code>Use secure DNS</code> switch.</li>
-                  <li>Select <code>Custom</code> and fill in <code>https://doh.libredns.gr/dns-query</code></li>
-                </ol>
-              </li>
-
-              <li class="mb-3"><strong>Edge</strong>
-                <ol>
-                  <li>Go to <code>edge://settings/privacy</code>.</li>
-                  <li>Scroll down to the <code>Security</code> section.</li>
-                  <li>Make sure the <code>Use secure DNS</code> option is enabled.</li>
-                  <li>Select Custom and fill in <code>https://doh.libredns.gr/dns-query</code></li>
-                </ol>
-              </li>
-
-            </ul>
-
-            <blockquote>
-              For more browser configuration guidelines check
-              <a href="https://gitlab.com/libreops/libredns/libredns.gr/-/wikis/home" target="_new">our wiki</a>.
-            </blockquote>
-
-            <hr>
+        <div class="card mx-auto mt-4">
+          <div class="card-header">
+            DNS over TLS
+          </div>
+          <div class="card-body">
+            <p>
+              <span class="badge badge-dark">IP</span> <code>116.202.176.26</code><br>
+              <span class="badge badge-dark">IPv6</span> <code>2a01:4f8:1c0c:8274::1</code><br>
+              <span class="badge badge-dark">Port</span> <code>853</code><br>
+              <span class="badge badge-dark">Domain</span> <code>dot.libredns.gr</code><br>
+            </p>
 
             <p class="docs-section">
               Blocking Ads and Trackers
@@ -116,88 +153,116 @@
               of known advertisement and tracking domains.
             </p>
             <p>
-              <span class="badge badge-dark">Endpoint</span> <code>https://doh.libredns.gr/ads</code>
+              <span class="badge badge-dark">Domain</span> <code>noads.libredns.gr</code><br>
             </p>
-          </div>
-        </div>
-
-        <div class="card w-75 mx-auto mt-4">
-          <div class="card-header">
-            DNS over TLS
-          </div>
-          <div class="card-body">
-            <p>
-              <span class="badge badge-dark">IP</span> <code>116.202.176.26</code><br>
-              <span class="badge badge-dark">Port</span> <code>853</code><br>
-              <span class="badge badge-dark">Domain</span> <code>dot.libredns.gr</code><br>
-            </p>
-            <p>
-              DNS over TLS (<a href="https://en.wikipedia.org/wiki/DNS_over_TLS" target="_blank">DoT</a>)
-              is best to be configured globally for the entire operating system.
-            </p>
-            <p>
-              A few clients already support the protocol, and the easiest way is to configure systemd to use it:
-            </p>
-            <p>
-              <ol>
-                <li>
-                  Open <code>/etc/systemd/resolved.conf</code> with you favorite editor and sudo rights.
-                </li>
-                <li>
-                  Make sure you have the following options:<br>
-                  <code>
-                    [Resolve]<br>
-                    DNS=116.202.176.26#dot.libredns.gr<br>
-                    FallbackDNS=127.0.0.1 ::1<br>
-                    DNSOverTLS=yes<br>
-                  </code>
-                  <br>
-                  <blockquote>
-                  If you are on systemd &lt; 243, then use <code>opportunistic</code> instead of <code>yes</code>.
-                  </blockquote>
-                </li>
-              </ol>
-            </p>
-
-            <hr>
 
             <p class="docs-section">
-              Blocking Ads and Trackers
-            </p>
-            <p>
-              We also offer DoT at a different port that blocks a
-              <a href="https://github.com/StevenBlack/hosts" target="_blank">crowdsourced list</a>
-              of known advertisement and tracking domains.
-            </p>
-            <p>
-              <span class="badge badge-dark">IP</span> <code>116.202.176.26</code><br>
-              <span class="badge badge-dark">Port</span> <code>854</code><br>
-              <span class="badge badge-dark">Domain</span> <code>dot.libredns.gr</code><br>
-            </p>
-            <p>
-              In case you want to update your systemd-resolv configuration file:<br>
-              <code>
-                [Resolve]<br>
-                DNS=116.202.176.26:854#dot.libredns.gr<br>
-                FallbackDNS=127.0.0.1 ::1<br>
-                DNSOverTLS=yes<br>
-              </code>
+              Documentation
             </p>
 
-            <hr>
-            <p class="docs-section"> DNS over TLS - IPv6 </p>
-            <p>We also offer <strong>IPv6</strong> support for DoH and DoT.</p>
-            <p>DNS over HTTPS should be transparent in use,
-             DNS Over TLS you should switch to the below IPv6 address.
-             In the below "More info" link, under systemd section, you can find details about IPv6 settings.
             <p>
-              <span class="badge badge-dark">IP</span> <code>2a01:4f8:1c0c:8274::1</code>
+              DNS over TLS (<a href="https://en.wikipedia.org/wiki/DNS_over_TLS" target="_blank">DoT</a>)
+              is best to be configured on the operating system.
             </p>
 
+            <div class="tab-section">
+              <input checked="checked" id="dot-tab1" type="radio" name="dot-tab">
+              <input id="dot-tab2" type="radio" name="dot-tab">
+              <input id="dot-tab3" type="radio" name="dot-tab">
+              <nav>
+                <ul>
+                  <li class="dot-tab1">
+                    <label for="dot-tab1">Linux</label>
+                  </li>
+                  <li class="dot-tab2">
+                    <label for="dot-tab2">Android</label>
+                  </li>
+                  <li class="dot-tab3">
+                    <label for="dot-tab3">Apple</label>
+                  </li>
+                </ul>
+              </nav>
+              <section>
+                <div class="dot-tab1">
+                  <ol>
+                    <li>
+                      Open <code>/etc/systemd/resolved.conf</code> with you favorite editor and sudo rights.
+                    </li>
+                    <li>
+                      Make sure you have the following options:<br>
+                      <code>
+                        [Resolve]<br>
+                        DNS=116.202.176.26#dot.libredns.gr<br>
+                        FallbackDNS=127.0.0.1 ::1<br>
+                        DNSOverTLS=yes
+                      </code>
+                    </li>
+                  </ol>
+
+                  <hr>
+
+                  <p>
+                    If you want to use the ads blocking endpoint you have to use a different port:<br>
+                    <code>DNS=116.202.176.26#noads.libredns.gr</code>
+                  </p>
+                </div>
+                <div class="dot-tab2">
+                  <p>
+                    In latests Android versions you can enable DNS over TLS (DoT) using the "Private DNS" option in settings.
+                  </p>
+                  <ol>
+                    <li>
+                      Open Settings and using the Search field type: Private DNS.
+                    </li>
+                    <li>
+                      From the 3 options (Off, Automatic, Custom), choose the last one. This will prompt you to enter a custom domain.
+                    </li>
+                    <li>
+                      Type <code>dot.libredns.gr</code> and hit Save.
+                      Use <code>noads.libredns.gr</code> if you prefer to use the ads blocking endpoint.
+                    </li>
+                  </ol>
+                </div>
+                <div class="dot-tab3">
+                  <p>
+                    Apple devices support encrypted DNS (both DoH & DoT) via Device Management Profiles.
+                  </p>
+                  <ol>
+                    <li>
+                      Using Safari pick the option you prefer below and download the appropriate profile.
+                    </li>
+                    <li>
+                      Go to Settings and you will see a notification for a new profile downloaded.
+                    </li>
+                    <li>
+                      Click on the notification and then click Install.
+                    </li>
+                  </ol>
+
+                  <hr>
+
+                  <p>Device Management Profiles</p>
+                  <ul>
+                    <li>
+                      <a href="https://gitlab.com/libreops/libredns/device-management-profile/-/raw/master/LibreDNS-DoH.mobileconfig">LibreDNS DoH</a>
+                    </li>
+                    <li>
+                      <a href="https://gitlab.com/libreops/libredns/device-management-profile/-/raw/master/LibreDNS-noads-DoH.mobileconfig">LibreDNS DoH: No Ads</a>
+                    </li>
+                    <li>
+                      <a href="https://gitlab.com/libreops/libredns/device-management-profile/-/raw/master/LibreDNS-DoT.mobileconfig">LibreDNS DoT</a>
+                    </li>
+                    <li>
+                      <a href="https://gitlab.com/libreops/libredns/device-management-profile/-/raw/master/LibreDNS-noads-DoT.mobileconfig">LibreDNS DoT: No Ads</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
 
-        <div class="card w-75 mx-auto mt-4">
+        <div class="card mx-auto mt-4">
           <div class="card-header">
             links
           </div>
@@ -216,7 +281,7 @@
           </div>
         </div>
 
-        <div class="card w-75 mx-auto mt-4">
+        <div class="card mx-auto mt-4">
           <div class="card-header">
             privacy
           </div>
@@ -241,13 +306,18 @@
           </div>
         </div>
 
+        <blockquote>
+          For more browser configuration guidelines check
+          <a href="https://gitlab.com/libreops/libredns/libredns.gr/-/wikis/home" target="_new">our wiki</a>.
+        </blockquote>
+
 
       </div>
 
     </div>
 
     <div class="container">
-      <footer class="p-3 px-md-4 my-3 border shadow w-75 mx-auto">
+      <footer class="p-3 px-md-4 my-3 border shadow mx-auto">
           <div class="row justify-content-sm-between">
             <div class="col-sm">
               <a href="https://riot.im/app/#/room/#libreops:matrix.org" class="mx-1 footer-link" target="_blank">
